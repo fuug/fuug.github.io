@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+nav{
+    display:flex;
+    background: #2947808c;
+}
+
+.parallax {
+    background-image: url("headp.jpg");
+    height: 800px;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headP{
+    color: #ffffff;
+    font-size: 90px;
+    padding: 90px;
+}
+
+.short-about>p{
+    font-size: 32px;
+    padding: 50px 180px;
+}
+
+.short-about{
+    background: #fde8cd;
+}
+
+.short-about p{
+    color: #707070;
+}
+
+
+.short-about img{
+    max-height: 300px;
+    max-width: auto;
+}
+
+/* The navigation bar */
+nav {
+    overflow: hidden;
+    background-color: rgba(51, 51, 51, 0.698);
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/* Links inside the navbar */
+nav a {
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change background on mouse-over */
+nav a:hover {
+    background: #ddd;
+    color: black;
+    text-decoration: none;
+}
+
+nav a:active{
+    background: #ddd;
+    color: black;
+}
+
