@@ -1,67 +1,181 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Глэмпинг Городок</title>
+</head>
 
-    <title>Отправка формы на почту </title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <style>
-    	form {
-    		background-color: #f9f9f9;
-    		padding: 20px;
-    		margin: 20px;
-    	}
-    </style>
-  </head>
-
-  <body>
-    <div class="container">
-
-      <div class="row">
-      	<div class="col-sm-4">
-      		<form action="telegram.php" method="POST">
-      			<legend>Заголовок формы</legend>
-
-      			<div class="form-group">
-      				<label for="">Введите ваше имя</label>
-      				<input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
-      			</div>
-      		
-      			<div class="form-group">
-      				<label for="">Введите номер телефона</label>
-      				<input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
-      			</div>
-      		
-      			<div class="form-group">
-      				<label for="">Введите email</label>
-      				<input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
-      			</div>
-      		
-      			<button type="submit" class="btn btn-primary">Отправить форму</button>
-      		</form>
-      	</div><!-- .col-sm-4 -->
-      </div> <!-- .row -->
-
-    </div><!-- /.container -->
+<body>
+    <header>
+        <nav>
+            <a href="#home">Logo</a>
+            <a href="#about">О нас</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+    <div class="parallax" id="home">
+        <p>Городок</p>
+    </div>
+
+    <!--  -->
+    <button onclick="document.getElementById('id01').style.display='block'" id="myBtn">Бронирование</button>
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="telegram.php" method="POST">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">×</span>
+            </div>
+
+            <div class="container">
+                <label for="user_name"><b>Имя</b></label>
+                <input type="text" placeholder="Фамилия Имя" name="user_name" required>
+
+                <label for="user_phone"><b>Телефон</b></label>
+                <input type="text" placeholder="+375" name="user_phone" required>
+
+                <label for="user_date"><b>Дата прибытия</b></label>
+                <input type="date" id="datePicker" name="user_date" value="" min="2021-04-01" max="2040-12-31">
+
+
+                <button type="submit">Оставить заявку</button>
+            </div>
+        </form>
+    </div>
+    <!--  -->
+
+    <div class="short-about" id="about">
+        <h1>О глэмпинге</h1>
+        <p>«Городок» — это маленькое, уютное пространство для отдыха, расположенное в живописном уголке на берегу реки
+            Западная Березина, окруженном лесами. Это идеальный вариант для отдыха с семьей или друзьями, там вы также
+            сможете незабываемо отметить юбилей, свадьбу или другие важные события на природе.
+        </p>
+
+        <ul>Экоцентр с глэмпингом на 86 мест:
+            <hr>
+            <li>56 мест в экоцентре</li>
+            <li>30 мест в глэмпинге</li>
+        </ul>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nam, error a deleniti, eos, voluptas corporis
+            aperiam reiciendis optio maiores pariatur odio. Inventore atque libero eveniet vel molestias sapiente
+            dolores.
+        </p>
+    </div>
+
+    <div class="short-img">
+        <img src="src/2.jpg" alt="">
+        <img src="src/3.jpg" alt="">
+        <img src="src/2.jpg" alt="">
+    </div>
+
+    <div class="about-room">
+        <h1>Наши глэмпинги</h1>
+        <div class="room">
+            <div class="left">
+                <p>Уютный номер, в котором есть все для комфортного проживания семьей или компанией друзей: удобная
+                    двуспальная кровать, диван, гардеробная зона, мини-кухня и терраса с потрясающим видом на озеро.
+                </p>
+                <ul>
+                    В номере:
+                    <hr>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="src/2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="room">
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nobis perferendis voluptatem
+                    aliquam
+                    eum iusto adipisci necessitatibus, officia ab earum et vel quaerat numquam deserunt aliquid. Hic
+                    quae
+                    autem nisi.
+                </p>
+
+                <ul>
+                    В номере:
+                    <hr>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+            <div class="left">
+                <img src="src/2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="about-room light-color">
+        <h1>Наш экоцентер</h1>
+        <div class="room">
+            <div class="left">
+                <p>Уютный номер, в котором есть все для комфортного проживания семьей или компанией друзей: удобная
+                    двуспальная кровать, диван, гардеробная зона, мини-кухня и терраса с потрясающим видом на озеро.
+                </p>
+                <ul>
+                    В номере:
+                    <hr>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+            <div class="right">
+                <img src="src/2.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="room">
+            <div class="right">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nobis perferendis voluptatem
+                    aliquam
+                    eum iusto adipisci necessitatibus, officia ab earum et vel quaerat numquam deserunt aliquid. Hic
+                    quae
+                    autem nisi.
+                </p>
+
+                <ul>
+                    В номере:
+                    <hr>
+                    <li>Lorem, ipsum dolor.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>Lorem ipsum dolor sit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                </ul>
+            </div>
+            <div class="left">
+                <img src="src/2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="terrain">
+        <h1>Территория</h1>
+    </div>
+
+
+
+</body>
+<script src="script.js"></script>
+
 </html>
-	
