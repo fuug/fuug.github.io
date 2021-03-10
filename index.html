@@ -1,98 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Глэмпинг Городок</title>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
 
-<body>
-    <header>
-        <nav>
-            <a href="#home">Logo</a>
-            <a href="#about">О нас</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <title>Отправка формы на почту </title>
 
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 
-    <div class="parallax" id="home">
-        <p>Городок</p>
-    </div>
+    <!-- Custom styles for this template -->
+    <style>
+    	form {
+    		background-color: #f9f9f9;
+    		padding: 20px;
+    		margin: 20px;
+    	}
+    </style>
+  </head>
 
+  <body>
+    <div class="container">
 
+      <div class="row">
+      	<div class="col-sm-4">
+      		<form action="telegram.php" method="POST">
+      			<legend>Заголовок формы</legend>
 
+      			<div class="form-group">
+      				<label for="">Введите ваше имя</label>
+      				<input type="text" class="form-control" id="" name="user_name" placeholder="Например, Иван">
+      			</div>
+      		
+      			<div class="form-group">
+      				<label for="">Введите номер телефона</label>
+      				<input type="text" class="form-control" id="" name="user_phone" placeholder="+7 (999) 99 99 999">
+      			</div>
+      		
+      			<div class="form-group">
+      				<label for="">Введите email</label>
+      				<input type="text" class="form-control" id="" name="user_email" placeholder="mail@mail.ru">
+      			</div>
 
-    <div class="short-about" id="about">
-        <h1>О глэмпинге</h1>
-        <p>«Городок» — это маленькое, уютное пространство для отдыха, расположенное в живописном уголке на берегу реки
-            Западная Березина, окруженном лесами. Это идеальный вариант для отдыха с семьей или друзьями, там вы также
-            сможете незабываемо отметить юбилей, свадьбу или другие важные события на природе.
-        </p>
+            <div class="form-group">
+      				<label for="">Введите email</label>
+      				<input type="date" class="form-control" id="" name="user_date" value="" min="2021-04-01" max="2040-12-31">
+      			</div>
+      		
+      			<button type="submit" class="btn btn-primary">Отправить форму</button>
+      		</form>
+      	</div><!-- .col-sm-4 -->
+      </div> <!-- .row -->
 
-        <ul>Экоцентр с глэмпингом на 86 мест:
-            <hr>
-            <li>56 мест в экоцентре</li>
-            <li>30 мест в глэмпинге</li>
-        </ul>
-
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nam, error a deleniti, eos, voluptas corporis
-            aperiam reiciendis optio maiores pariatur odio. Inventore atque libero eveniet vel molestias sapiente
-            dolores.
-        </p>
-    </div>
-
-    <div class="short-img">
-        <img src="2.jpg" alt="">
-        <img src="3.jpg" alt="">
-        <img src="2.jpg" alt="">
-    </div>
-
-    <div class="about-room">
-        <div class="room-f">
-            <div class="left">
-                <p>Уютный номер, в котором есть все для комфортного проживания семьей или компанией друзей: удобная
-                    двуспальная кровать, диван, гардеробная зона, мини-кухня и терраса с потрясающим видом на озеро.
-                </p>
-                <ul>
-                    В номере:
-                    <hr>
-                    <li>Lorem, ipsum dolor.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit amet.</li>
-                    <li>Lorem ipsum dolor sit.</li>
-                    <li>Lorem ipsum dolor sit amet consectetur.</li>
-                </ul>
-            </div>
-            <div class="right">
-                <img src="2.jpg" alt="">
-            </div>
-        </div>
-        <div class="room-f">
-            <div class="right">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi nobis perferendis voluptatem
-                    aliquam
-                    eum iusto adipisci necessitatibus, officia ab earum et vel quaerat numquam deserunt aliquid. Hic
-                    quae
-                    autem nisi.
-                </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque suscipit aliquam aliquid temporibus
-                    eveniet excepturi, doloribus ipsam veritatis odio ab adipisci quasi quisquam eligendi laborum nulla
-                    quaerat? Fugiat, ducimus neque.</p>
-            </div>
-            <div class="left">
-                <img src="2.jpg" alt="">
-            </div>
-        </div>
-    </div>
+    </div><!-- /.container -->
 
 
-
-
-</body>
-<script src="script.js"></script>
-
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
 </html>
+	
