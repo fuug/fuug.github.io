@@ -1,4 +1,4 @@
-Запомнить ip
+<?php
 function getIp() {
   $keys = [
     'HTTP_CLIENT_IP',
@@ -18,3 +18,4 @@ function getIp() {
 $ip = getIp();
 // выведем IP клиента на экран
 echo 'ip = ' . $ip;  
+?>
